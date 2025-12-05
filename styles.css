@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width : 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    display: flex;  
+    background-color: #bfa5ab
+}
+#part1{
+    height: 100%;
+    width: 26%;
+    /* background-color: #f4d35e; */
+}
+#overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #bfa5ab59
+}
+#part2{
+    height: 100%;
+    width: 60%;
+    background-size: cover  ;
+    background-position: center;
+    background-image: url(https://cdn.cosmos.so/37508d2f-65c7-477f-9384-6929c11e8392?format=jpeg);
+    background-color: #ee964b;
+}
+#part3{
+    height: 100%;
+    width: 14%;
+    /* background-color: #f95738; */
+}
+#text{
+    height : 35vh;
+    width: 20vw;
+    /* background-color: #ee964b; */
+    position: absolute;
+    top: 50%;
+    left: 14.005%;
+    transform: translate(0,-50%);
+}
+#text h1{
+    font-size: 115px;
+    color: white;
+    font-family:Monument Extended;
+    margin-bottom: 20px;
+    font-weight: 800;
+    line-height: 68px ;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+#small-img{
+    height: 40vh;
+    width: 15vw;
+    background-image: url(https://images.unsplash.com/photo-1551781186-406a4fc347c5?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 50%;
+    right: 10.005%;
+    transform: translate(0,-50%);
+}
+
+#vertical{
+   position: absolute;
+   /* background-color:red; */
+   right: 0.1%;
+   transform-origin: 0% 0%;
+
+  
+}
+#vertical h1{
+    
+    transform: rotate(-90deg);
+    transform-origin: 65% 0% ;
+    letter-spacing: 20px;
+    /* line-height: 70%; */
+    font-size: 80px;
+    font-weight: 1000;  
+    font-family: gilroy;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: aliceblue;
+}
+
+#nav{
+    height: 100px;
+    position: absolute;
+    /* background-color: red; */
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 13%;
+    top: 10%;
+
+}
+#nav img{
+    height: 100px;
+    /* width: 500px; */
+    border-radius: 50%;
+    margin-left: 20px;
+}
+#nav h5{
+    color: white;
+    font-size: 16px;
+    /* margin-right: 80px; */
+    font-family: 'Gillroy', sans-serif;
+    font-weight: 600;
+}
