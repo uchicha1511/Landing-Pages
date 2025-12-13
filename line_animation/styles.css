@@ -1,0 +1,159 @@
+@import url('https://fonts.cdnfonts.com/css/cooper-black');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family: 'Cooper Black', sans-serif;
+                                                
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    display: flex;  
+    /* background-color: #f3d3db; */
+    position: relative;
+    justify-content: center;
+    align-items: center; 
+    
+}
+#main>h1{
+  font-size: 4vw;
+    font-weight: lighter;
+    
+    /* background-color: burlywood; */
+    width :60%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 4;
+}
+
+#main>h1::after{
+  content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -6px; /* adjust as needed */
+    transform: translateX(-50%);
+    width: 40%;
+    height: 30px;
+    /* background-color: red; */
+
+
+   background-image: url(https://thisisdigital.co.uk/dist/images/underline-green.svg);
+}
+
+#main #img1{
+    height: 500px;
+    /* width: 100%; */
+    object-fit: cover;
+    position: absolute;
+   
+    top: 20%;
+    left: 10%;
+   
+}
+
+#main #img2{
+    height: 230px;
+    /* width: 100%; */
+    object-fit: cover;
+    position: absolute;
+    
+   top: 20%;
+    right: 23%;
+   
+}   
+
+#main #img3{
+    height: 200px;
+    /* width: 100%; */
+    object-fit: cover;
+    position: absolute;
+    z-index: 500;
+    bottom: 10%;
+    right: 15%;
+   
+}
+
+
+#nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 70px;
+    /* background-color: aqua; */
+    
+}
+
+#nav h1{
+    font-size: 30px;
+    font-weight: 100!important;
+    /* color: rgb(182, 78, 78); */
+}
+
+#nav_2{
+ display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+#nav_2 a{
+    text-decoration: none;
+    padding: 0 10px;
+    font-size: 20px;
+    font-weight: 100!important;
+    color: rgb(182, 78, 78);
+    cursor: pointer;
+}
+
+#nav_2 a:nth-last-child(1){
+    padding: 8px 15px;
+    /* background-color: rgb(199, 239, 39); */
+    color: rgb(9, 9, 9);
+    border-radius: 50px;
+    border: 1px solid black;
+    position: relative;
+    overflow: hidden;
+}
+
+#nav_2 a:nth-last-child(1) #green{
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    border-radius: 50px;
+     
+    background-color: springgreen;
+}
+
+#nav_2 a:nth-last-child(1):hover #green{
+    z-index: -1;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+}   
+
+
+
+#main img{
+    transition: margin 0.6s ease;
+}
+#main img:hover{
+    
+    margin-top: -20px;
+}
+
+#main #img3:hover{
+    transform: translateY(-20px) scale(1.1);
+}
