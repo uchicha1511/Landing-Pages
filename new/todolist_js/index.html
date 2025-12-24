@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Todo List</h1>
+        
+        <div class="input-section">
+            <input type="text" id="todoInput" placeholder="">
+            <button class="add-btn">Add Todo</button>
+        </div>
+
+        <div id="section">
+
+
+        </div>
+    </div>
+
+    <script>
+      const todoInput = document.getElementById('todoInput');
+      const section = document.getElementById('section');
+      const addBtn = document.querySelector('.add-btn');
+
+      let localtodolist = []; 
+
+      const getstoredls =()=>{return JSON.parse(localStorage.getItem('todolistlstorage'));}
+
+      const showtodlistfromls =()=>{
+         
+        console.log(getstoredls());
+        if(getstoredls()){
+          //line 37 is solving the problem of entering into new array again and again , we are adding past data to localtodolist at the time of loading the page
+          localtodolist=getstoredls();
+        }
+        localtodolist.forEach((todo)=>{
+          const divElement=document.createElement('div');
+          divElement.className='todo-item';
+
+
+          divElement.innerHTML=`
+              <span class="todo-text">${todo}</span>
+              <button class="delete-btn">Delete</button>
+          `;
+           section.appendChild(divElement);
+        })
+
+      }
+      
+
+
+
+
+      const addTodoLS = (todo)=>{
+        return localStorage.setItem('todolistlstorage', JSON.stringify(todo));
+
+      }
+
+
+        showtodlistfromls();
+         
+
+      addBtn.addEventListener('click', (e) => {
+           e.preventDefault();
+           
+        
+          
+          const todoText = todoInput.value.trim();
+          if (todoText === '' || localtodolist.includes(todoText)) return ;
+
+          // 1.Add todotext to local array which is empty by default ORRRRRRR have previous values and 2. sending the array to local storage  3.to solve the problem of entering into new array again and again , we are adding past data to localtodolist at the time of loading the page on line 37
+
+          localtodolist.push(todoText);
+         
+          addTodoLS(localtodolist);
+
+          const divElement=document.createElement('div');
+          divElement.className='todo-item';
+
+
+          divElement.innerHTML=`
+              <span class="todo-text">${todoText}</span>
+              <button class="delete-btn">Delete</button>
+          `;
+           section.appendChild(divElement);
+           todoInput.value='';
+
+
+      });
+
+      
+      section.addEventListener('click', (e) => 
+      {
+        // console.log(e.target);
+        if(e.target.classList.contains('delete-btn')){
+          const todoItem = e.target.parentElement;
+          const todoText = todoItem.querySelector('.todo-text').innerText;
+
+          // Remove from local array
+          localtodolist = localtodolist.filter(todo => todo !== todoText);
+          // Update local storage
+          addTodoLS(localtodolist);
+          // Remove from DOM
+          section.removeChild(todoItem);
+        }
+
+
+
+      });
+
+
+    </script>
+</body>
+</html>
