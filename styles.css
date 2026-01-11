@@ -218,7 +218,7 @@ justify-content: space-between  ;
   /* align-items: self-end; */
   gap: 20px;
   color: #fff;
-  background-color: #7b3c47;
+  background-color: #7b3c4660;
   padding:  16px 16px 16px 16px;
   border: 1px solid rgba(255, 255, 255, 0.241);
   border-radius: 50px;  
@@ -257,7 +257,7 @@ gap: 10px;
   /* align-items: self-end; */
   gap: 20px;
   color: #fff;
-  background-color: #7b3c47;
+  background-color: #7b3c4660;
   padding:  16px 16px 16px 16px;
   border: 1px solid rgba(255, 255, 255, 0.27);
   border-radius: 50%;  
