@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+main
+{
+
+    height: 100vh;
+    width: 100vw;
+    /* background-color: green; */
+    position: relative;
+    display: flex;
+
+    font-family: "Bebas Neue", sans-serif;
+    /* padding: 20px; */
+    /* z-index: -1; */
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#sub-nav{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    text-transform: capitalize;
+
+}
+
+#sub-nav p{
+    font-size: 20px;
+}
+
+#main-left{
+    padding: 10px 20px;
+    padding-top: 30px;
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    color: whitesmoke;
+    /* background-color: #d368a7; */
+}
+
+#main-right{
+    z-index: -1;
+    
+    padding: 20px 0px 10px 20px;
+    /* padding-top: 20px; */
+    height: 100%;
+     width: 50%;
+     background-image: url(./bgi.png);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     /* position: relative; */
+     /* right: ; */
+       /* background-color: #d368a7; */
+}
+#big-right{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#right-nav{
+    
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 40px;
+    height: 70px;
+    width: 250px;
+    /* background-color: blue; */
+    border-radius: 50px;
+    padding: 5px;
+   
+    border: 1px solid whitesmoke;
+}
+#right-nav p{
+    font-size: 20px;
+    color: #fbfbfb;
+    font-weight: 400;
+}
+
+.play{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fbfbfb;
+    height: 100%;
+    width: 70px;
+    border-radius: 90px;
+}
+.play i{
+    font-size: 20px;
+    color: black;
+}
+
+#hero
+{
+    margin-top: 100px;
+    padding: 1px;
+    padding-left:20px;
+}
+#hero #fir{
+     font-size: 40px;
+}
+#hero #sec{
+    font-size: 120px;
+    line-height: 100px;
+    margin-bottom: 30px;
+}
+
+#p-fir
+{
+    font-size: 40px;
+}
+
+#arrow{
+    margin-top: 20px;
+       display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 40px;
+    height: 70px;
+    width: 250px;
+    /* background-color: blue; */
+    border-radius: 50px;
+    padding: 5px;
+    border: 1px solid whitesmoke;
+}
+
+
+svg {
+  /* This allows the text to rotate if you want an animation later */
+  transform: rotate(-90deg); 
+}
+
+text {
+  text-transform: capitalize;
+  font-weight: 300; /* Light weight for a luxury feel */
+}
+
+
+
+body {
+  background-color: #000; /* Black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+svg {
+  /* This allows the text to rotate if you want an animation later */
+  transform: rotate(-90deg); 
+}
+
+text {
+  text-transform: capitalize;
+  font-weight: 300; /* Light weight for a luxury feel */
+}
+
+#icon
+{
+    margin-top: 60px;
+    margin-left: 20px;
+}
+
+.card{
+    position: absolute;
+    bottom: 5%;
+    left: 35%;
+    height:140px;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.281);
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    border: 0.1px solid whitesmoke;
+    border-radius: 20px;
+    display: flex;
+    gap: 5px;
+    color: whitesmoke;
+}
+
+#card-left img{
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+#card-right{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#capsule{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+#capsule .do{
+    display: flex;
+    justify-content: center;
+    /* background-color: #fff; */
+    border: 1px solid whitesmoke;
+    border-radius: 50px;
+    width: 76px;
+    padding: 10px;
+}
